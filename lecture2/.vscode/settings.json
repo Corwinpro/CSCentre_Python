@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/Users/petrkungurtsev/anaconda3/bin/python",
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": true
+}
