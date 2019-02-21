@@ -9,8 +9,12 @@ import sys
 
 
 def trace(handle):
-    # Trace should return a decorator.
-    # A decorator is a func that takes another func
+    """
+    This is a brute-force realization of a decorator with argument,
+    which has three levels of 'nesting'.
+    trace() should return a decorator: a func that takes another func
+    """
+
     def decorator(func):
         # A decorator takes a function that returns a wrap around it
         @functools.wraps(func)
@@ -29,6 +33,12 @@ Instead of doing this every single time, we can create a decorator for decorator
 
 
 def with_arguments(deco):
+    """
+    with_arguments() is applied to a decorator 'deco' and returns a decorator
+    with_arguments: deco -> deco
+    
+    """
+
     @functools.wraps(deco)
     def wrapper(*dargs, **dkwargs):
         def decorator(func):
@@ -42,12 +52,16 @@ def with_arguments(deco):
 
 
 """
-This new decorator with_arguments allows us to:
+This is how it works. The new decorator with_arguments allows us to:
 """
 
 
 @with_arguments
 def trace(func, handle):
+    """
+    trace() takes a decorated function AND an argument
+    """
+
     def inner(*args, **kwargs):
         print(func.__name__, args, kwargs, file=handle)
         return func(*args, **kwargs)
@@ -73,10 +87,17 @@ def trace(func=None, *, handle=sys.stdout):
     if func is None:
         return lambda f: trace(f, handle=handle)
 
-    # Otherwise, when we actually apply the decorator, this happens
+    # Otherwise, when there exists a positional argument,
+    # we actually apply the decorator, this happens
     @functools.wraps(func)
     def inner(*args, **kwargs):
         print(func.__name__, args, kwargs, file=handle)
         return func(*args, **kwargs)
 
     return inner
+
+
+# And this is how this method works (with kwargs only):
+@trace(handle=sys.stderr)
+def identity(x):
+    return x
