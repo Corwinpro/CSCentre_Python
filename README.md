@@ -13,3 +13,9 @@ Lecture 3. Decorators and functools
 - Decorator examples
 - Decorator with positional and kw-only arguments
 - Functools module: lru_cache, single_dispatch
+
+Lecture 5. Collections
+- Tuples and Namedtuples
+- Lists and deque
+- Dicts, DefaultDicts, OrderedDicts
+- Counters
