@@ -19,3 +19,8 @@ Lecture 5. Collections
 - Lists and deque
 - Dicts, DefaultDicts, OrderedDicts
 - Counters
+
+Lecture 6. Classes (Part 1)
+- Useful class decorators (singleton, deprecated)
+- Mixin classes
+- Magic methods
