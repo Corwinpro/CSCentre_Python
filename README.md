@@ -24,3 +24,8 @@ Lecture 6. Classes (Part 1)
 - Useful class decorators (singleton, deprecated)
 - Mixin classes
 - Magic methods
+
+ Lecture 7. Exceptions and Context managers
+ - Exceptions basic: try / except / else / finally
+ - Context Managers
+ - contextlib
