@@ -33,5 +33,5 @@ Lecture 6. Classes (Part 1)
  Lecture 8. Iterators, generators and contextlibs
  - Iterators, binary tree
  - Generators: yield, send, throw, yield from, return
- - Coroutines
- - 
+ - Generators as iterators, coroutines, compact context managers
+ - itertools
