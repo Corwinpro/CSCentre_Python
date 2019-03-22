@@ -10,7 +10,7 @@ import sys
 
 def trace(handle):
     """
-    This is a brute-force realization of a decorator with argument,
+    This is a brute-force implementation of a decorator with argument,
     which has three levels of 'nesting'.
     trace() should return a decorator: a func that takes another func
     """
@@ -29,6 +29,12 @@ def trace(handle):
 
 """
 Instead of doing this every single time, we can create a decorator for decorators
+Main logic:
+with_arguments: deco -> wrapper
+wrapper: arguments -> decorator
+decorator: func -> deco(func, arguments)
+
+with_arguments: deco -> deco(func, arguments)
 """
 
 
@@ -36,7 +42,6 @@ def with_arguments(deco):
     """
     with_arguments() is applied to a decorator 'deco' and returns a decorator
     with_arguments: deco -> deco
-    
     """
 
     @functools.wraps(deco)
@@ -53,6 +58,12 @@ def with_arguments(deco):
 
 """
 This is how it works. The new decorator with_arguments allows us to:
+
+def func(): ...
+def trace(func, arg): ...
+trace = with_arguments(trace)
+func = trace(arg)(func) <==>    @trace(arg)
+                                def func():...
 """
 
 

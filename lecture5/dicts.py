@@ -11,7 +11,7 @@ d_ = dict.fromkeys(["foo", "bar"])  # {'foo': None, 'bar': None}
 d_ = dict.fromkeys("abc", 0)  # {'a': 0, 'b': 0, 'c': 0}
 
 # These expressions are not equivalent:
-d1 = dict.fromkeys("abcs", [])  # all keys share the same key
+d1 = dict.fromkeys("abcd", [])  # all keys share the same key
 d2 = {ch: [] for ch in "abcd "}
 
 # 2.
