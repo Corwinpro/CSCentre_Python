@@ -29,3 +29,9 @@ Lecture 6. Classes (Part 1)
  - Exceptions basic: try / except / else / finally
  - Context Managers
  - contextlib
+
+ Lecture 8. Iterators, generators and contextlibs
+ - Iterators, binary tree
+ - Generators: yield, send, throw, yield from, return
+ - Coroutines
+ - 
