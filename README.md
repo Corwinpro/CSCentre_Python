@@ -35,3 +35,8 @@ Lecture 6. Classes (Part 1)
  - Generators: yield, send, throw, yield from, return
  - Generators as iterators, coroutines, compact context managers
  - itertools
+
+ Lecture 10. Classes (Part 2)
+ - Descriptors: __get__, __set__, __delete__
+ - Data and non-data descriptors, cached_property
+ - property, staticmethod and classmethod
