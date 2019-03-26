@@ -40,3 +40,5 @@ Lecture 6. Classes (Part 1)
  - Descriptors: __get__, __set__, __delete__
  - Data and non-data descriptors, cached_property
  - property, staticmethod and classmethod
+ - Metaclasses, __new__
+ - ABC and abstractmethod, collections.abc
